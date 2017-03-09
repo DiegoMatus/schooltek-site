@@ -49,10 +49,10 @@ h2 {
 
 a {
   color: #6cb670;
-  -webkit-transition: color 400ms, background-color 400ms;
-  -moz-transition: color 400ms, background-color 400ms;
-  -o-transition: color 400ms, background-color 400ms;
-  transition: color 400ms, background-color 400ms;
+  -webkit-transition: color 200ms, background-color 200ms;
+  -moz-transition: color 200ms, background-color 200ms;
+  -o-transition: color 200ms, background-color 200ms;
+  transition: color 200ms, background-color 200ms;
 }
 
 a:hover,
@@ -61,14 +61,15 @@ a:focus {
   color: #2a95be;
 }
 
+/*************************
+*******HOME******
+**************************/
 .btn-schooltek {
   background-color: #F37D1C !important; /*6cb670*/
   border-bottom: 1px solid #F37D1C !important; /*70C080*/
-  font-size: 58px !important;
-  width: 500px !important;
-  height: 2.5em;
+  font-size: 54px !important;
   float: right;
-  line-height: 50px;
+  line-height: 54px;
   padding-top: 25px;
 }
 
@@ -90,21 +91,6 @@ a:focus {
   padding: 5px 20px !important;
 }
 
-/*Footer sections*/
-.footer-section {
-  min-height: 50px;
-  margin: 25px 0;
-  border-bottom: 1px solid gray;
-}
-
-.footer-section h4 {
-  color: #ddd;
-}
-
-.footer-section a:hover {
-  color: #6cb670 !important;
-}
-
 .btn-primary {
   margin-left: 5px;
   border-bottom: 1px solid #70C080 !important;
@@ -113,6 +99,18 @@ a:focus {
 .btn-primary:hover, .btn-primary:focus {
   background-color: #70C080 !important;
   border-bottom: 1px solid #70C080 !important;
+}
+
+.btn-info {
+  margin-left: 5px;
+  background-color: #29abe2 !important;
+  border-bottom: 1px solid #29abe2 !important;
+  color: white !important;
+}
+
+.btn-info:hover, .btn-info:focus {
+  background-color: #30b0f0 !important;
+  border: 1px solid #30b0f0 !important;
 }
 
 .btn-schooltek:hover, .btn-schooltek:focus {
@@ -179,36 +177,7 @@ ul.nostyle {
 ul.nostyle i {
   color: #6cb670;
 }
-.scaleIn {
-  -webkit-animation-name: scaleIn;
-  animation-name: scaleIn;
-}
-@-webkit-keyframes scaleIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@keyframes scaleIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-}
+
 /*************************
 *******Header******
 **************************/
@@ -225,6 +194,7 @@ ul.nostyle i {
   height: auto;
   padding: 15px 15px 12px;
 }
+
 @media only screen and (min-width: 768px) {
   #main-menu.navbar-default {
     background: rgba(255, 255, 255, 0.9);
@@ -279,6 +249,7 @@ ul.nostyle i {
     background-color: rgba(255, 255, 255, 0.9);
   }
 }
+
 #main-slider {
   overflow: hidden;
   margin-top: -25px;
@@ -320,17 +291,27 @@ ul.nostyle i {
   }
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {       
+      #logotipo { 
+          width: 50%;
+      } /* IE11 */
+
+      .icon-service, .icon-service-information {
+          height: 10%;
+      }
+}
+
 #main-slider .slider-inner .btn {
   margin-top: 10px;
 }
 
-#features, #tutores {
+#parents {
   padding: 100px 0 75px;
 }
 #services {
   padding: 100px 0 75px;
 }
-#profesores {
+#schools {
   background-color: #f1f1f1;
   padding: 100px 0 75px;
 }
@@ -338,16 +319,24 @@ ul.nostyle i {
   background-color: #ffffff;
   padding: 75px 0;
 }
+#map-title p {
+  margin: -60px 250px 20px 250px;
+}
 #faq {
   padding: 100px 0 25px;
 }
-#information1, #information2 {
+#information1, #information2, #partners {
   background-color: #ffffff;
   padding: 100px 0 75px;
 }
 .media.service-box {
   margin: 25px 0;
-  min-height: 50px;
+  min-height: 200px;
+  width: 104%;
+}
+.media.service-box-small {
+  margin: 25px 0;
+  min-height: 150px;
 }
 .media.service-box .pull-left {
   margin-right: 20px;
@@ -385,15 +374,7 @@ ul.nostyle i {
   box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.8);
   -webkit-box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.8);
 }
-/* Start: Recommended Isotope styles */
-/**** Isotope Filtering ****/
-.isotope-item {
-  z-index: 2;
-}
-.isotope-hidden.isotope-item {
-  pointer-events: none;
-  z-index: 1;
-}
+
 #about {
   padding: 100px 0;
   background-color: #f1f1f1;
@@ -418,112 +399,9 @@ ul.nostyle i {
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #eee;
 }
-#get-in-touch {
-  padding: 100px 0;
-  background-image: -moz-linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
-  background-image: -webkit-linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
-  background-image: -ms-linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
-}
-#blog {
+#sign-up {
   padding: 100px 0;
 }
-#blog .blog-post {
-  border: 1px solid #eee;
-  padding: 15px;
-}
-#blog .blog-post .post-format {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  line-height: 34px;
-  text-align: center;
-  color: #fff;
-  background: #222534;
-  border: 3px solid #fff;
-  border-radius: 100px;
-}
-#blog .blog-post.blog-large .entry-thumbnail {
-  margin: -15px -15px 15px;
-  position: relative;
-}
-#blog .blog-post.blog-large .post-format {
-  width: 66px;
-  height: 66px;
-  line-height: 60px;
-  position: absolute;
-  right: 20px;
-  bottom: -33px;
-}
-#blog .blog-post.blog-large .post-format > i {
-  font-size: 20px;
-}
-#blog .blog-post.blog-large .entry-date {
-  font-size: 12px;
-  display: block;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  color: #6cb670;
-}
-#blog .blog-post.blog-large .entry-title {
-  margin-top: 0;
-  font-size: 18px;
-  line-height: 1;
-  margin-bottom: 15px;
-}
-#blog .blog-post.blog-large .entry-title a {
-  color: #64686d;
-}
-#blog .blog-post.blog-large .entry-title a:hover {
-  color: #6cb670;
-}
-#blog .blog-post.blog-media {
-  margin-bottom: 30px;
-}
-#blog .blog-post.blog-media .entry-thumbnail {
-  margin: -15px 15px -15px -15px;
-  position: relative;
-}
-#blog .blog-post.blog-media .post-format {
-  position: absolute;
-  top: 20px;
-  right: -10px;
-}
-#blog .blog-post.blog-media .entry-date {
-  font-size: 12px;
-  display: block;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  color: #6cb670;
-}
-#blog .blog-post.blog-media .entry-title {
-  margin-top: 0;
-  font-size: 18px;
-  line-height: 1;
-  margin-bottom: 15px;
-}
-#blog .blog-post.blog-media .entry-title a {
-  color: #64686d;
-}
-#blog .blog-post.blog-media .entry-title a:hover {
-  color: #6cb670;
-}
-#blog .blog-post .entry-meta {
-  margin-top: 20px;
-  border-top: 1px solid #eee;
-  padding-top: 15px;
-}
-#blog .blog-post .entry-meta > span {
-  display: inline-block;
-  margin-right: 10px;
-  color: #999;
-}
-#blog .blog-post .entry-meta > span > a {
-  color: #999;
-}
-#blog .blog-post .entry-meta > span > a:hover {
-  color: #6cb670;
-}
-
 textarea {
   resize: none;
 }
@@ -541,7 +419,7 @@ textarea {
   margin-bottom: 0;
 }
 
-#contact label span {
+#contact label span, #partners span {
   color: red;
 }
 
@@ -549,39 +427,26 @@ textarea {
   margin: 0 0 15px 0 !important;
 }
 
-#get-in-touch input[type="text"], #get-in-touch input[type="email"], #get-in-touch input[type="tel"] {
+#sign-up input[type="text"], #sign-up input[type="email"], #sign-up input[type="tel"] {
   border: none;
   box-shadow: none;
   border-bottom: solid 2px #cccccc;
   transition: border 0.3s;
 }
 
-#get-in-touch input[type="text"]:focus, #get-in-touch input[type="email"]:focus, #get-in-touch input[type="tel"]:focus {
+#sign-up input[type="text"]:focus, #sign-up input[type="email"]:focus, #sign-up input[type="tel"]:focus {
   border: none;
   box-shadow: none;
   border-bottom: solid 2px #969696;
 }
 
-#get-in-touch a {
+#sign-up a {
   margin-left: 15px;
   color: #969696;
 }
 
-#get-in-touch a:hover {
+#sign-up a:hover {
   color: #6cb670;
-}
-
-.con-info {
-    margin-bottom: 20px;
-}
-
-.con-info i,
-.con-info span {
-    float: left;
-}
-
-.con-info span {
-  margin: -5px 0 0 15px;
 }
 
 address {
@@ -592,25 +457,18 @@ address {
   margin: 35px 0;
 }
 
-/*
-#df {
-  border: 1px solid blue;
-  position: relative;
-  top: 270px;
-  left: 355px;
-  height: 30px;
-  width: 30px;
-}
-
-#df:hover {
-  background-color: #6cb670;
-  opacity: 0.25;
-}
-*/
-
 /***********************
 ********* Footer ******
 ************************/
+#footer .form-control {
+  background-color: transparent;
+  border: none;
+}
+
+#footer a:hover {
+  color: white !important;
+}
+
 #footer {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -621,14 +479,49 @@ address {
 #footer a {
   color: #fff;
 }
-#footer ul {
+.social-network {
   list-style: none;
   padding: 0;
   margin: 0 -7.5px;
 }
-#footer ul > li {
+.social-network > li {
   display: inline-block;
   margin: 0 7.5px;
+}
+
+.dropdown ul li a {
+  color: 111 !important;
+}
+
+.btn-language {
+  background-color: transparent;
+}
+
+.dropdown-menu {
+  background-color: transparent;
+}
+
+.btn-language:hover, .btn-language:focus {
+  color: #6cb670;
+}
+
+/*Footer sections*/
+.footer-section {
+  min-height: 50px;
+  margin: 25px 0;
+  border-bottom: 1px solid gray;
+}
+
+.footer-section h4 {
+  color: #ddd;
+}
+
+.footer-section img {
+  padding-bottom: 20px;
+}
+
+.footer-section a:hover {
+  color: #6cb670 !important;
 }
 
 /*Services*/
@@ -649,7 +542,7 @@ address {
 }
 
 #applestore {
-  margin-left: -75px;
+  margin-left: -50px;
 }
 
 .follow-link {
@@ -720,12 +613,16 @@ address {
 
 #information1-slider  img {
   position: relative;
-  top: 150px;
+  top: 190px;
 }
 
 #information2-slider  img {
   position: relative;
   top: 175px;
+}
+
+.text-green {
+  color: #6cb670;
 }
 
 .panel-default > .panel-heading .panel-title {
@@ -739,6 +636,10 @@ address {
   color: #6cb670;
 }
 
+#questions-qya {
+  margin-bottom: -10%;
+}
+
 #answers {
   margin-top: 10%;
 }
@@ -746,6 +647,10 @@ address {
 #answers h3 {
   font-weight: 100;
   color: #6cb670;
+}
+
+#questions-whereis {
+  margin-top: 50px;
 }
 
 .question-section {
@@ -775,392 +680,26 @@ address {
   margin: 0 0 10% 25%;
 }
 
-/*
-  @media-querys
-*/
-
-@media only screen and (max-width: 768px) {
-  #main-slider .slider-inner h2 {
-    margin-top: 100px;
-    font-size: 48px;
-    text-align: center;
-  }
-
-  .btn-schooltek {
-    width: 100% !important;
-    text-align: center;
-    height: 120px;
-    font-size: 36px !important;
-    line-height: 40px;
-  }
-
-  .btn-schooltek > span {
-    font-size: 24px;
-    font-weight: bold;
-  }
-
-  .footer-section {
-    text-align: center;
-  }
-
-  .footer-section > div {
-    margin-bottom: 15px;
-  }
-
-  #main-slider .item {
-    min-height: 490px;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
-  }
-
-  .apps {
-    position: relative;
-    top: 445px;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .col-md-4 > img {
-    margin: 0;
-  }
-
-  .icon-service {
-    margin: 15% 0 !important;
-  }
-
-  #information1-slider .slider-inner h2 {
-    top: 120px !important;
-    font-size: 42px;
-    text-align: center;
-  }
-
-  #information1-slider  img {
-    position: relative;
-    top: 120px;
-    padding: 0;
-    margin: 0;
-    width: 90%;
-    margin-left: 5%;
-  }  
-
-  #information2-slider .slider-inner h2 {
-    top: 120px !important;
-    font-size: 42px;
-    text-align: center;
-  }
-
-  #information2-slider  img {
-    position: relative;
-    top: 140px;
-    padding: 0;
-    margin-left: 10%;
-    width: 80%;
-  }  
-
-  #information1-slider .item, #information2-slider .item {
-    min-height: 420px;
-  }
-
-  #applestore, #playstore {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  #map {
-    margin-top: -50px;
-  }
-
-  #map-slider .item {
-    height: 300px;
-    background-position: 50% 0;
-    background-size: 120%;
-  }
-
-  .question-menu-item {
-    width: 48%;
-  }
-
-  .question-menu-item:hover {
-    width: 52%;
-    border-bottom: 3px solid #29abe2;
-  }
-
-}
-
-@media only screen and (max-width: 768px) and (orientation: landscape) {
-  #main-slider .slider-inner h2 {
-    font-size: 44px;
-  }
-
-  .btn-schooltek {
-    font-size: 32px !important;
-    width: 50% !important;
-    margin: 25%;
-    min-height: 100px;
-  }
-
-  #main-slider .item {
-    min-height: 350px;
-  }
-
-  .apps {
-    position: relative;
-    top: 270px;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-  }
-
-.col-md-4 > img {
-    margin: 0;
-  }
-
-  .icon-service {
-    margin: 15% 0 !important;
-  }
-
-  #information1-slider .item,   #information2-slider .item {
-    min-height: 520px;
-  }
-
-  #information2-slider .slider-inner h2, #information1-slider .slider-inner h2 {
-    font-size: 40px;
-  }
-
-  #information2-slider  img {
-    position: relative;
-    top: 130px;
-    padding: 0;
-    margin-left: 15%;
-    width: 70%;
-  } 
-
-  #applestore, #playstore {
-    margin-left: 0;
-    width: 80%;
-  }
-
-  #map {
-    margin-top: -50px;
-  }
-
-  #map-slider .item {
-    height: 500px;
-    background-position: 50% 0;
-    background-size: 110%;
-  }
-
-}
-
-@media only screen and  (min-width: 769px) and (max-width: 960px) {
-  #main-slider .slider-inner h2 {
-    margin-top: 150px;
-    font-size: 48px;
-  }
-
-  .btn-schooltek {
-    width: 70% !important;
-    height: 120px;
-    font-size: 48px !important;
-    line-height: 40px;
-  }
-
-  .btn-schooltek > span {
-    font-size: 32px;
-    font-weight: bold;
-  }
-
-  .apps {
-    position: relative;
-    top: 380px;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-  }
-
-  #main-slider .item {
-    min-height: 435px !important;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
-  }
-  #information1-slider .slider-inner h2 {
-    top: 100px !important;
-    font-size: 32px;
-    text-align: center;
-  }
-
-  #information1-slider  img {
-    position: relative;
-    top: 100px;
-    padding: 0;
-    margin: 0;
-    width: 60%;
-    margin-left: 20%;
-  }  
-
-  #information2-slider .slider-inner h2 {
-    top: 100px !important;
-    font-size: 32px;
-    text-align: center;
-  }
-
-  #information2-slider  img {
-    position: relative;
-    top: 120px;
-    padding: 0;
-    margin-left: 25%;
-    width: 50%;
-  } 
-
-  #map {
-    margin-top: -50px;
-  }
-
-  #map-slider .item {
-    height: 500px;
-    background-position: 50% 0;
-    background-size: 90%;
-  }  
-}
-
-@media only screen and  (min-width: 961px) and (max-width: 1139px) {
-  #main-slider .slider-inner h2 {
-    margin-top: 150px;
-    font-size: 54px;
-  }
-
-  .btn-schooltek {
-    width: 65% !important;
-    font-size: 52px !important;
-    height: 130px;
-    line-height: 45px;
-  }
-
-  .btn-schooltek > span {
-    font-size: 36px;
-    font-weight: bold;
-  }
-
-  .apps {
-    position: relative;
-    top: 385px;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-  }
-
-  #main-slider .item {
-    min-height: 435px !important;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
-  }
-
-  #information1-slider .slider-inner h2 {
-    top: 380px !important;
-    font-size: 42px;
-  }
-
-  #information1-slider  img {
-    position: relative;
-    top: 200px;
-  }
-
-  #information2-slider .slider-inner h2 {
-    position: relative;
-    top: 360px;
-  }
-
-  #information2-slider  img {
-    position: relative;
-    top: 225px;
-    width: 100%;
-  } 
-
-
-
-  #map-slider .item {
-    height: 500px;
-    background-size: 90%;
-  }
-}
-
-@media only screen and (min-width: 1480px){
-  .btn-schooltek {
-    background-color: #F37D1C !important; /*6cb670*/
-    border-bottom: 1px solid #F37D1C !important; /*70C080*/
-    font-size: 64px !important;
-    width: 500px !important;
-    height: 2.8em;
-    float: right;
-    line-height: 70px;
-    padding-top: 25px;
-  }
-
-  .btn-schooltek > span {
-    font-size: 42px;
-    font-weight: bold;
-  }
-
-  #main-slider .slider-inner h2 {
-    margin-top: 220px;
-    font-size: 76px;
-  }
-
-  #main-slider .item {
-    min-height: 700px;
-  }
-
-  .apps {
-    position: relative;
-    top: 600px;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-  }
-
-  #map-slider .item {
-    height: 600px;
-    background-size: 65%;
-  }
-
-  #map h2 {
-    margin-top: -5%;
-  }
-
-
- #information1-slider .slider-inner h2 {
-    top: 340px;
-    font-size: 68px;
-    margin-left: -20%;
- }
-
- #information2-slider .slider-inner h2 {
-    top: 340px;
-    font-size: 80px;
- }
 
 /*
-  #information1-slider .item {
-    background-image: url(../images/slider/information5.jpg);
-  }
+  BE A PARTNER
 */
-  #information2-slider .item {
-    background-image: url(../images/slider/information2-2.jpg);
-  }
 
-  #information2-slider img, #information1-slider img {
-    margin-right: -100px !important;
-  }
-
-/*
-  #faq-slider .item {
-    background-image: url(../images/slider/faq2.jpg);
-  }
-*/
+#partners h4 {
+  margin: 25px 0;
 }
+
+#partners form {
+  padding-left: 15px;
+}
+
+#partners .form-group {
+  margin: 10px 0;
+}
+
+#partners .form-group label{
+  margin: 0;
+}
+
 
 

@@ -1,119 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Schooltek | Fore more information</title>
+    <title>Schooltek | Be a partner</title>
 	<!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.transitions.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
+    
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+    <script src="js/angular.min.js"></script>
 </head><!--/head-->
 
-<body id="home" class="homepage">
+<body id="home">
 
-    <header id="header">
-        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"><img width="180px" src="images/logo.svg" alt="logo"></a>
-                </div>
-				
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li class="scroll active"><a href="index.html">Home</a></li>
-                        <li class="scroll"><a data-hash="#profesores" href="index.html#profesores">Solution</a></li>
-                        <li class="scroll"><a data-hash="#get-in-touch" href="index.html#get-in-touch">Sign up</a></li>
-                        <li class="scroll"><a href="faq.html">Q&A</a></li>
-                        <a id="login" class="btn btn-info" href="#">Login</a>
-                    </ul>
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-    </header><!--/header-->
+    <header id="header" ng-include="'header.html'"></header><!--/header-->
 
-    <section id="information2">
+    <section id="partners">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown"><img width="5%" src="images/services/iconos-33.svg" alt=""> Partners</h2>
+                <h2 class="section-title text-center wow fadeInDown">Sé uno de nuestros socios</h2>
             </div>
             <div class="row">
-                <div class="col-md-6">
-                    <h3 class="text-center wow fadeInDown">Why do we offer a reseller partner program?</h3>
-                    <p>Our solution:
+                <div class="col-xs-12 col-sm-5 col-sm-offset-1">
+                    <h2 class="text-left wow fadeInDown">¿Por que ofrecemos un programa de socios?</h2>
+                    <h4>Nuestra solución:</h4>
+                    <ul>
+                        <li>Proporciona grandes beneficios y valor a las escuelas.</li>
+                        <li>Tiene un modelo de licencias muy atractivo.</li>
+                        <li>Puede ser implementado en minutos.</li>
+                        <li>Es fácil de usar.</li>
+                    </ul>
 
-    Provides great benefits and value to schools
-    It has an attractive licensing model
-    Can be deployed in minutes.
-    Are simple to use.
-    Can be used worldwide (we currently have deployments in Mexico and Brazil).
-
-The sheer size of the market opportunity and the popularity of our solution have led us to create our partner program.
-What are the advantages of becoming a partner?
-Our partners:
-
-    9 Generate substantial recurrent (high retention rate) and incremental revenues.
-    Have access to new opportunities.
-    Extend their competitive advantage.
-
-In addition, our partners benefit from:
-
-    Access to our partner portal.
-    Technical and Sales training.
-    Sales and Marketing material
-    Use of our partner program logo
-    Priority access to our solutions roadmaps and new features
-
-For whom?
-Our partner program is particularly suitable for any:
-
-    Distributor or retailer
-    Independent Partner
-</p>
+                    <p>El tamaño de la oportunidad de mercado de la educación y potencial de nuestra solución nos han llevado a crear nuestro programa de socios.</p>
+                    <h2>¿Cuáles son las ventajas de convertirse en un socio?</h2>
+                    <h4>Nuestros socios:</h4>
+                    <ul>
+                        <li>Tener acceso a nuevas oportunidades.</li>
+                        <li>Ampliar su ventaja competitiva.</li>
+                    </ul>
+                    <h4>Además, nuestros socios se benefician de:</h4>
+                    <ul>
+                        <li>El acceso a nuestro portal de socios.</li>
+                        <li>La formación técnica y de ventas.</li>
+                        <li>El uso de nuestro logotipo programa de socios.</li>
+                    </ul>
+                    <h4>¿Para quién?</h4>
+                    <p>Nuestro programa de socios es particularmente adecuado para cualquier:</p>
+                    <ul>
+                        <li>Distribuidor o minorista</li>
+                        <li>Socio independiente</li>
+                    </ul>
                 </div>
                     
-                <div class="col-md-6">
+                <div class="col-xs-12 col-sm-5">
                     <div class="contact-form">
-                        <form id="main-contact-form" name="contact-form" method="post" action="#">
+                        <form id="partner-contact-form" name="contact-form" method="post" action="partnermail.php">
                             <div class="form-group">
-                                <label for="name">Full Name<span>*</span></label>
-                                <input type="text" name="name" class="form-control" placeholder="Your name" required>
+                                <label for="name">Nombre<span>*</span></label>
+                                <input type="text" name="name" class="form-control" placeholder="Nombre" required>
                             </div>
                             <div class="form-group">
-                                <label for="name">Email<span>*</span></label>
+                                <label for="email">Email<span>*</span></label>
                                 <input type="email" name="email" class="form-control" placeholder="email@example.com" required>
                             </div>
                             <div class="form-group">
-                                <label for="name">Subject</label>
-                                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                                <label for="phone">Teléfono<span>*</span></label>
+                                <input type="tel" name="phone" class="form-control" placeholder="Teléfono" required>
                             </div>
                             <div class="form-group">
-                                <label for="name">Your Message<span>*</span></label>
-                                <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+                                <label for="rfc">RFC<span>*</span></label>
+                                <input type="text" name="id" class="form-control" placeholder="RFC" required>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <div class="form-group">
+                                <label for="city">Ciudad<span>*</span></label>
+                                <input type="text" name="city" class="form-control" placeholder="Ciudad" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">Estado<span>*</span></label>
+                                <input type="text" name="state" class="form-control" placeholder="Estado" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">CP<span>*</span></label>
+                                <input type="text" name="zip" class="form-control" placeholder="CP" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Company">Empresa<span>*</span></label>
+                                <input type="text" name="company" class="form-control" placeholder="Empresa" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="which">Ciudades a donde pretende llevar Schooltek:</label>
+                                <textarea name="which" class="form-control" rows="2"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Describa como pretender captar clientes:</label>
+                                <textarea name="description" class="form-control" rows="2"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="giro">Giro de la empresa<span>*</span></label> </br>
+                                <input type="radio" name="giro" value="tour">Venta de hardware </br>
+                                <input type="radio" name="giro" value="book">Venta de libros </br>
+                                <input type="radio" name="giro" value="soft">Venta de Software </br>
+                                <input type="radio" name="giro" value="educ">Consultoría educacional </br>
+                                <input type="radio" name="giro" value="other">Otros </br>
+                            </div> 
+                            <div class="form-group">
+                                <label for="comments">Comentarios</label>
+                                <textarea name="comments" class="form-control" rows="2"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
                         </form>
                     </div>
                 </div>
@@ -121,72 +128,11 @@ Our partner program is particularly suitable for any:
         </div>
     </section>
 
-    <footer id="footer">
-        <div class="container">
-            <div class="row footer-section">
-                <div class="col-xs-12 col-sm-4">
-                    <img width="170px" src="images/logo.svg" alt="">
-                </div>
-                <div class="col-xs-6 col-sm-3 col-sm-offset-1">
-                    <a class="btn btn-primary" href="#" >Sign Up</a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-sm-offset-1">
-                    <a class="btn btn-primary" href="#" >Be a partner</a>
-                </div>
-            </div>
-            <div class="row footer-section">
-                <div class="col-xs-6 col-sm-4">
-                    <a target="_blank" href="http://shapebootstrap.net/">Portugués<span>(Brasil)</span></a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-sm-offset-1">
-                    <h4>About</h4>
-                    <a href="where_is_schooltek.html">Service</a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-sm-offset-1">
-                    <ul class="">
-                        <li><a href="https://www.facebook.com/schooltekUSA/?fref=ts"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://twitter.com/schooltekusa"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="https://plus.google.com/100941369251237563464/posts"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="https://www.instagram.com/schooltek/"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCJHU9vQuAL5w7d_raSJx9bg"><i class="fa fa-youtube"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row footer-section">
-                <div class="col-xs-12 col-sm-5">
-                    <address>info@schooltek.com</address>
-                </div>
-                <div class="col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-0">
-                    <img id="playstore" width="60%" class="img-responsive" src="images/playstore.png" alt="">
-                </div>
-                <div class="col-xs-5 col-sm-2">
-                    <img id="applestore" width="60%" class="img-responsive" src="images/applestore.png" alt="">
-                </div>
-            </div>
-            <div class="row footer-section">
-                <div class="col-xs-6 col-sm-4">
-                    <p>&copy; 2016 Schooltek Inc.</p>
-                </div>
-                <div class="col-xs-5 col-sm-3 col-sm-offset-1">
-                    <a href="#">Privacidad</a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-sm-offset-1">
-                    <a href="#">Términos y condiciones</a>
-                </div>
-            </div>
-        </div>
-    </footer><!--/#footer-->
+    <footer id="footer" ng-include="'footer.html'"></footer><!--/#footer-->
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="js/owl.carousel.min.js"></script>
     <script src="js/mousescroll.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jquery.inview.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
 </body>

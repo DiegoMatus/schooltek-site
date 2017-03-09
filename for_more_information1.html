@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,47 +12,21 @@
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.transitions.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
+         
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+    <script src="js/angular.min.js"></script>
 </head><!--/head-->
 
-<body id="home" class="homepage">
+<body id="home">
 
-    <header id="header">
-        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"><img width="180px" src="images/logo.svg" alt="logo"></a>
-                </div>
-				
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li class="scroll active"><a href="index.html">Home</a></li>
-                        <li class="scroll"><a data-hash="#profesores" href="index.html#profesores">Solution</a></li>
-                        <li class="scroll"><a data-hash="#get-in-touch" href="index.html#get-in-touch">Sign up</a></li>
-                        <li class="scroll"><a href="faq.html">Q&A</a></li>
-                        <a id="login" class="btn btn-info" href="#">Login</a>
-                    </ul>
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-    </header><!--/header-->
+    <header id="header" ng-include="'header.html'"></header><!--/header-->
 
     <section id="information1-slider">
         <div class="item">
@@ -60,7 +34,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-7 col-md-offset-0">
-                            <h2 class="text-left">CLOUD BASED SOLUTION</h2>
+                            <h2 class="text-left">SOLUCIÓN EN LA NUBE</h2>
                         </div>
                         <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-5 col-md-offset-0">
                             <img class="img-responsive" src="images/main-feature.png" alt="">
@@ -74,18 +48,20 @@
     <section id="information1">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">An innovative solution for schools!</h2>
-                <p class="text-center wow fadeInDown">WIth Schooltek, school´s community are more communicated and integrated.</p>
-                <p class="text-center wow fadeInDown">Schooltek not only provides safety and real time communication but also helps parents to encourage their children to perform well.</p>
+                <h2 class="section-title text-center wow fadeInDown">¡Innovación tecnológica para los colegios!</h2>
+                <p class="text-center wow fadeInDown">Con Schooltek, tu comunidad escolar está mejor conectada y más integrada.</p>
+                <p class="text-center wow fadeInDown">Schooltek proporciona una comunicación en tiempo real que permite a los padres a apoyar a sus hijos para un mejor desempeño dentro del colegio.</p>
             </div>
             <div class="row">
                 <div class="col-xs-10 col-xs-offset-1 col-sm-2 col-sm-offset-5">
                     <img id="icon-information" width="50%" class="img-responsive" src="images/services/iconos-41.svg" alt="">
                 </div>
                 <div class="col-xs-12">
-                    <p class="text-center wow fadeInDown">With any cost of implementation, tu puedes posicionar a tu colegio a la vanguardia en tecnologia educativa. Schooltek is here to send academic information in real-time to help parents to support their children to improve their school performance. For more details please follow this link</p>
+                    <p class="text-center wow fadeInDown">Posiciona a tu colegio a la vanguardia en tecnología educativa utilizando Schooltek, en cuestión de minutos los profesores, padres y estudiantes estarán conectados en una sola plataforma de comunicación escolar.</p>
+                    <p class="text-center wow fadeInDown">Gestiona las informaciones más relevantes de tu colegio sin ninguna inversión y sin ninguna instalación de software.</p>
                 </div>
             </div>
+            <p class="follow-link text-center">Si tienes más preguntas, por favor sigue el <a href="faq.html">enlace</a></p>
             <div class="row">
                 <div class="col-md-5 col-md-offset-1">
                     <div class="row media service-box wow fadeInRight">
@@ -94,7 +70,7 @@
                         </div>
                         <div class="col-xs-9 media-body">
                             <h4 class="media-heading">Comunicación Unificada</h4>
-                            <p>Schooltek enables your school community be integrated. With the same institutional information regarding to the school</p>
+                            <p class="text-justify">Gestiona las actividades diarias de tu colegio. Permite crear un único canal oficial de comunicación, ayudando a evitar que fluya información no oficial de otras fuentes.</p>
                         </div>
                     </div>
 
@@ -103,8 +79,8 @@
                             <img class="icon-service-information img-responsive" src="images/services/iconos-29.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Información institucional y académica</h4>
-                            <p>With Schooltek teachers can manage all relevant information in real time.</p>
+                            <h4 class="media-heading">Información Institucional y Académica</h4>
+                            <p class="text-justify">Mantén informados a los padres y estudiantes de las informaciones escolares: Calificaciones, tareas, asistencias, calendario, información institucional. Con Schooltek puedes enviar en tiempo real las informaciones más relevantes a los padres y estudiantes.</p>
                         </div>
                     </div>
 
@@ -113,8 +89,8 @@
                             <img class="icon-service-information img-responsive" src="images/services/iconos-43.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Mensajes</h4>
-                            <p>Send messages to the community with wthe relevant information</p>
+                            <h4 class="media-heading">Mensajes y Alertas</h4>
+                            <p class="text-justify">Envíe mensajes a los padres y estudiantes sobre asuntos relevantes. Con schooltek puedes enviar un número ilimitado de mensajes a la comunidad escolar.</p>
                         </div>
                     </div>
 
@@ -123,8 +99,8 @@
                             <img class="icon-service-information img-responsive" src="images/services/iconos-06.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Privacy and security</h4>
-                            <p>Strong hardware level encryption keeps your data safe and private</p>
+                            <h4 class="media-heading">Privacidad y seguridad</h4>
+                            <p class="text-justify">Schooltek mantiene seguro y protegido los datos personales. La información que se almacena en Schootek solo podrá ser vista por tu colegio y no por los otros colegios.</p>
                         </div>
                     </div>
                 </div>
@@ -135,8 +111,8 @@
                             <img class="icon-service-information img-responsive" src="images/services/iconos-15.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Estadísticas e información</h4>
-                            <p>Know the performance of information you send to your comminity</p>
+                            <h4 class="media-heading">Control de estadísticas</h4>
+                            <p class="text-justify">Monitorea el desempeño de las actividades de tu colegio desde el panel de estadísticas y obtén reportes que te ayuden e evaluar mejor tus procesos.</p>
                         </div>
                     </div>
 
@@ -145,8 +121,8 @@
                             <img class="icon-service-information img-responsive" src="images/services/iconos-19.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Control optimizado del tiempo</h4>
-                            <p>Reduce your opperational time with a easy and quicly to implement platform</p>
+                            <h4 class="media-heading">Optimización de tiempo y recursos</h4>
+                            <p class="text-justify">Schooltek ayuda a simplificar las actividades diarias de tu colegio dentro de los procesos administrativos reduciendo el tiempo y los recursos. Sustituye los envíos tradicionales de información por envíos en tiempo real a través de una plataforma conectada en la nube.</p>
                         </div>
                     </div>
 
@@ -155,8 +131,8 @@
                             <img class="icon-service-information img-responsive" src="images/services/iconos-25.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Control de facturas y pago</h4>
-                            <p>Send the payments to theri parents and studens</p>
+                            <h4 class="media-heading">Pagos de colegiaturas</h4>
+                            <p class="text-justify">Envía la boleta de pago de colegiaturas de la forma más simple y práctica. Evita enviar documentos impresos, los padres podrán pagar a través de su teléfono móvil utilizando la aplicación de Schooltek.</p>
                         </div>
                     </div>
 
@@ -165,81 +141,21 @@
                             <img class="icon-service-information img-responsive" src="images/services/iconos-27.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Easy to implementation</h4>
-                            <p>Implement schooltek is easy and quicly</p>
+                            <h4 class="media-heading">Fácil de implementar</h4>
+                            <p class="text-justify">Schooltek es una solución fácil de implementar, una vez que recibas tu usuario y contraseña, podrás seguir un paso a paso en el registro de las informaciones de tu colegio en nuestra plataforma. Y en cuestión de minutos podrás empezar a usarlo.</p>
                         </div>
                     </div>
                 </div>
             </div>
+            <p class="follow-link text-center">If you have more questions, please follow the <a href="faq.html">link</a></p>
         </div>
     </section>
 
-    <footer id="footer">
-        <div class="container">
-            <div class="row footer-section">
-                <div class="col-xs-12 col-sm-4">
-                    <img width="170px" src="images/logo.svg" alt="">
-                </div>
-                <div class="col-xs-6 col-sm-3 col-sm-offset-1">
-                    <a class="btn btn-primary" href="#" >Sign Up</a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-sm-offset-1">
-                    <a class="btn btn-primary" href="#" >Be a partner</a>
-                </div>
-            </div>
-            <div class="row footer-section">
-                <div class="col-xs-6 col-sm-4">
-                    <a target="_blank" href="http://shapebootstrap.net/">Portugués<span>(Brasil)</span></a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-sm-offset-1">
-                    <h4>About</h4>
-                    <a href="where_is_schooltek.html">Service</a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-sm-offset-1">
-                    <ul class="">
-                        <li><a href="https://www.facebook.com/schooltekUSA/?fref=ts"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://twitter.com/schooltekusa"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="https://plus.google.com/100941369251237563464/posts"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="https://www.instagram.com/schooltek/"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCJHU9vQuAL5w7d_raSJx9bg"><i class="fa fa-youtube"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row footer-section">
-                <div class="col-xs-12 col-sm-5">
-                    <address>info@schooltek.com</address>
-                </div>
-                <div class="col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-0">
-                    <img id="playstore" width="60%" class="img-responsive" src="images/playstore.png" alt="">
-                </div>
-                <div class="col-xs-5 col-sm-2">
-                    <img id="applestore" width="60%" class="img-responsive" src="images/applestore.png" alt="">
-                </div>
-            </div>
-            <div class="row footer-section">
-                <div class="col-xs-6 col-sm-4">
-                    <p>&copy; 2016 Schooltek Inc.</p>
-                </div>
-                <div class="col-xs-5 col-sm-3 col-sm-offset-1">
-                    <a href="#">Privacidad</a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-sm-offset-1">
-                    <a href="#">Términos y condiciones</a>
-                </div>
-            </div>
-        </div>
-    </footer><!--/#footer-->
+    <footer id="footer" ng-include="'footer.html'"></footer><!--/#footer-->
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="js/owl.carousel.min.js"></script>
     <script src="js/mousescroll.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jquery.inview.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
 </body>

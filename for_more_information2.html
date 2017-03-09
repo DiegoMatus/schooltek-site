@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,47 +12,21 @@
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.transitions.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
+    
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+    <script src="js/angular.min.js"></script>
 </head><!--/head-->
 
-<body id="home" class="homepage">
+<body id="home">
 
-    <header id="header">
-        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"><img width="180px" src="images/logo.svg" alt="logo"></a>
-                </div>
-				
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li class="scroll active"><a href="index.html">Home</a></li>
-                        <li class="scroll"><a data-hash="#profesores" href="index.html#profesores">Solution</a></li>
-                        <li class="scroll"><a data-hash="#get-in-touch" href="index.html#get-in-touch">Sign up</a></li>
-                        <li class="scroll"><a href="faq.html">Q&A</a></li>
-                        <a id="login" class="btn btn-info" href="#">Login</a>
-                    </ul>
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-    </header><!--/header-->
+    <header id="header" ng-include="'header.html'"></header><!--/header-->
 
     <section id="information2-slider">
         <div class="item">
@@ -74,8 +48,8 @@
     <section id="information2">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Connecting schools with parents and students</h2>
-                <p class="text-center wow fadeInDown">Providing an excellent ally that allows them to be aware of academic information on their children to support them to improve their school performance</p>
+                <h2 class="section-title text-center wow fadeInDown">Padres y estudiantes mejores conectados con los colegios</h2>
+                <p class="text-center wow fadeInDown">Schooltek proporciona una excelente solución online que permite a los padres estar al tanto de la información académica de sus hijos para apoyar a mejorar su rendimiento escolar.</p>
             </div>
             <div class="row">
                 <div class="col-md-5 col-md-offset-1">
@@ -84,8 +58,8 @@
                             <img class="icon-service-information img-responsive" src="images/services/iconos-29.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Información institucional</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            <h4 class="media-heading">Información Institucional</h4>
+                            <p class="text-justify">Visualiza la Información Institucional de tu colegio como la Misión, Visión, Valores, Reglamento y Directorio.</p>
                         </div>
                     </div>
 
@@ -94,8 +68,8 @@
                             <img class="icon-service-information img-responsive" src="images/services/iconos-43.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Mensajes y avisos</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            <h4 class="media-heading">Mensajes y Alertas</h4>
+                            <p class="text-justify">Reciba mensajes sobre asuntos relevantes de tu colegio.</p>
                         </div>
                     </div>
 
@@ -105,7 +79,7 @@
                         </div>
                         <div class="col-xs-9 media-body">
                             <h4 class="media-heading">Tareas</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            <p class="text-justify">Reciba los documentos y las tareas asignadas con la fecha de entrega. Descarga los archivos desde su teléfono móvil o computador.</p>
                         </div>
                     </div>
 
@@ -114,8 +88,8 @@
                             <img class="icon-service-information img-responsive" src="images/services/iconos-06.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Privacy and security</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            <h4 class="media-heading">Privacidad y seguridad</h4>
+                            <p class="text-justify">Schooltek mantiene seguro y protegido los datos personales. La información que se almacena en schootek solamente podrá ser vista por el colegio. Las informaciones escolares de los estudiantes solo serán vistas por los estudiantes y sus padres.</p>
                         </div>
                     </div>
                 </div>
@@ -127,7 +101,7 @@
                         </div>
                         <div class="col-xs-9 media-body">
                             <h4 class="media-heading">Asistencia</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            <p class="text-justify">Visualiza la no asistencia a las aulas de los estudiantes. Schooltek notifica cuando un estudiante no asistió o tuvo un retardo.</p>
                         </div>
                     </div>
 
@@ -137,7 +111,7 @@
                         </div>
                         <div class="col-xs-9 media-body">
                             <h4 class="media-heading">Calificaciones</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            <p class="text-justify">Reciba las calificaciones de las materias que está cursando los estudiantes.</p>
                         </div>
                     </div>
 
@@ -147,7 +121,7 @@
                         </div>
                         <div class="col-xs-9 media-body">
                             <h4 class="media-heading">Calendario</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            <p class="text-justify">Sincroniza el calendario oficinal la escuela con el calendario de tu teléfono móvil, envíe confirmaciones de asistencia a los eventos escolares.</p>
                         </div>
                     </div>
 
@@ -156,81 +130,21 @@
                             <img class="icon-service-information img-responsive" src="images/services/iconos-25.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Bills and paymant controls</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            <h4 class="media-heading">Pago de colegiaturas</h4>
+                            <p class="text-justify">Reciba la boleta de pago de colegiaturas de la forma más simple y práctica. Podrás efectuar el pago desde tu teléfono móvil a través de Schooltek.</p>
                         </div>
                     </div>
                 </div>
             </div>
+            <p class="follow-link text-center">Si tienes más preguntas, por favor entra <a href="faq_parents.html">aquí</a></p>
         </div>
     </section>
 
-    <footer id="footer">
-        <div class="container">
-            <div class="row footer-section">
-                <div class="col-xs-12 col-sm-4">
-                    <img width="170px" src="images/logo.svg" alt="">
-                </div>
-                <div class="col-xs-6 col-sm-3 col-sm-offset-1">
-                    <a class="btn btn-primary" href="#" >Sign Up</a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-sm-offset-1">
-                    <a class="btn btn-primary" href="#" >Be a partner</a>
-                </div>
-            </div>
-            <div class="row footer-section">
-                <div class="col-xs-6 col-sm-4">
-                    <a target="_blank" href="http://shapebootstrap.net/">Portugués<span>(Brasil)</span></a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-sm-offset-1">
-                    <h4>About</h4>
-                    <a href="where_is_schooltek.html">Service</a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-sm-offset-1">
-                    <ul class="">
-                        <li><a href="https://www.facebook.com/schooltekUSA/?fref=ts"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://twitter.com/schooltekusa"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="https://plus.google.com/100941369251237563464/posts"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="https://www.instagram.com/schooltek/"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCJHU9vQuAL5w7d_raSJx9bg"><i class="fa fa-youtube"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row footer-section">
-                <div class="col-xs-12 col-sm-5">
-                    <address>info@schooltek.com</address>
-                </div>
-                <div class="col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-0">
-                    <img id="playstore" width="60%" class="img-responsive" src="images/playstore.png" alt="">
-                </div>
-                <div class="col-xs-5 col-sm-2">
-                    <img id="applestore" width="60%" class="img-responsive" src="images/applestore.png" alt="">
-                </div>
-            </div>
-            <div class="row footer-section">
-                <div class="col-xs-6 col-sm-4">
-                    <p>&copy; 2016 Schooltek Inc.</p>
-                </div>
-                <div class="col-xs-5 col-sm-3 col-sm-offset-1">
-                    <a href="#">Privacidad</a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-sm-offset-1">
-                    <a href="#">Términos y condiciones</a>
-                </div>
-            </div>
-        </div>
-    </footer><!--/#footer-->
+    <footer id="footer" ng-include="'footer.html'"></footer><!--/#footer-->
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="js/owl.carousel.min.js"></script>
     <script src="js/mousescroll.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jquery.inview.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
 </body>

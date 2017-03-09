@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="Schooltek">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,9 +23,11 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+    <script src="js/angular.min.js"></script>
 </head><!--/head-->
 
-<body id="home" class="homepage">
+<body id="home" ng-controller="SchooltekController">
 
     <header id="header">
         <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
@@ -37,16 +39,17 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img width="180px" src="images/logo.svg" alt="logo"></a>
+                    <a class="navbar-brand" href="index.html"><img id="logotipo" width="170px" src="images/logo.svg" alt="logo"></a>
                 </div>
 				
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li class="scroll active"><a href="#home">Home</a></li>
-                        <li class="scroll"><a href="#profesores">Solution</a></li>
-                        <li class="scroll"><a href="#get-in-touch">Sign up</a></li>
-                        <li class="scroll"><a href="faq.html">Q&A</a></li>
-                        <a id="login" class="btn btn-info" href="#">Login</a>
+                        <li class="scroll"><a href="#schools">Escuelas</a></li>
+                        <li class="scroll"><a href="#parents">Padres</a></li>
+                        <li class="scroll"><a href="where_is_schooltek.html">Acerca de</a></li>
+                        <li class="scroll"><a href="#sign-up">Regístrate</a></li>
+                        <a id="login" class="btn btn-info" href="http://app.schooltek.com/public/login/mx">Login</a>
                     </ul>
                 </div>
             </div><!--/.container-->
@@ -60,52 +63,54 @@
                     <div class="row">
                         <div id="slider" class="col-sm-8 col-sm-offset-4">
                             <div class="carousel-content row">
-                                <h2 class="col-xs-12 text-right">BRING ALL THE <span>BEST</span> </br>IN YOUR SCHOOL</h2>
-                                <a class="col-xs-12 btn btn-primary btn-schooltek btn-lg" href="#get-in-touch"><strong>SIGN UP & WIN</strong> <br/><span id="free">A FREE YEAR LICENCE</span></a>
+                                <h2 class="col-xs-12 text-right">LLEVA LO <span>MEJOR</span> </br>A TU COLEGIO</h2>
+                                <a class="btn btn-primary btn-schooltek btn-lg" href="#sign-up"><strong>REGÍSTRATE Y OBTÉN</strong> <br/><span id="free">UNA LICENCIA POR UN MES!</span></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="apps row">                            
-                <a class="app col-xs-5 col-xs-offset-1 col-sm-3 col-sm-offset-3 col-md-2 col-md-offset-5" href="#"><img width="90%" class="img-responsive" src="images/playstore.png" alt=""></a>
-                <a class="app col-xs-5 col-sm-3 col-md-2" href="#"><img width="90%" class="img-responsive" src="images/applestore.png" alt=""></a>
+                <a target="blank" class="app col-xs-5 col-xs-offset-1 col-sm-3 col-sm-offset-3 col-md-2 col-md-offset-5" href="https://play.google.com/store/apps/details?id=com.schooltek.client"><img width="90%" class="img-responsive" src="images/playstore.png" alt=""></a>
+                <a class="app col-xs-5 col-sm-3 col-md-2" href="https://itunes.apple.com/mx/app/schooltek-mobile/id1120748572?l=en&mt=8"><img width="90%" class="img-responsive" src="images/applestore.png" alt=""></a>
             </div>
         </div>
     </section><!--/#main-slider-->
 
-    <section id="get-in-touch">
+    <section id="sign-up">
         <div class="container-wrapper">
             <div class="container">
                 <div class="row">
                     <div class="section-header">
-                        <h2 class="section-title text-center wow fadeInDown">Sign up and win a free year licence!</h2>
+                        <h2 class="section-title text-center wow fadeInDown">Regístrate y gana una licencia de 1 mes!</h2>
                     </div>
                     <div>
                         <div class="contact-form">
-                            <form id="main-contact-form" class="col-sm-10 col-sm-offset-1" name="contact-form" method="post" action="#">
+                            <form id="main-contact-form" class="col-sm-10 col-sm-offset-1" name="contact-form" method="post" action="signupmail.php">
                                 
                                 <div class="form-group col-xs-12 col-sm-5">
-                                    <input type="text" placeholder="Your name" class="form-control" name="name" id="name">
+                                    <input required type="text" placeholder="Nombre" class="form-control" name="name">
                                 </div>
                                 
                                 <div class="form-group col-xs-12 col-sm-5">
-                                    <input type="email" placeholder="Email" class="form-control" name="email" id="Your email">
-                                </div>
-
-                                
-                                <div class="form-group col-xs-12 col-sm-5">
-                                    <input type="tel" placeholder="Telephone" class="form-control" name="email" id="email">
+                                    <input required type="email" placeholder="Email" class="form-control" name="email">
                                 </div>
 
+                                
                                 <div class="form-group col-xs-12 col-sm-5">
-                                    <input type="text" placeholder="School name" class="form-control" name="email" id="email">
+                                    <input required type="tel" placeholder="Teléfono" class="form-control" name="telephone">
+                                </div>
+
+                                <div class="form-group col-xs-12 col-sm-5">
+                                    <input required type="text" placeholder="Nombre de la escuela" class="form-control" name="school">
                                 </div>
                                 
-                                <button type="submit" class="btn btn-primary col-sm-1">Enviar</button>
+                                <div class="col-sm-1">
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                </div>
                                 
                                 <div class="col-xs-12">
-                                    <a href="#">Rules and regulations</a>
+                                    <a data-toggle="modal" data-target="#regulations" href="#">Normas y reglamentos</a>
                                 </div>
                             </form>
                         </div>
@@ -115,11 +120,11 @@
         </div>
     </section>
 
-    <section id="profesores">
+    <section id="schools">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Helping schools be the best they can be</h2>
-                <p class="text-center wow fadeInDown">Schooltek is an innovative Educational technology  that connect schools with parents in a purpose to help encourage their children to perform well.</p>
+                <h2 class="section-title text-center wow fadeInDown">Ayudando a los colegios a formar mejores estudiantes</h2>
+                <p class="text-center wow fadeInDown">Schooltek es una plataforma online que mejora los procesos administrativos de los colegios y mejora la comunicación con los padres, con el objetivo de ayudar a lograr un mejor acompañamiento y desempeño escolar de sus hijos. Es fácil de usar y ofrece beneficios y muy útiles para la comunidad escolar.</p>
             </div>
             <div class="row">
                 <div class="col-md-4 wow fadeInLeft">
@@ -132,7 +137,7 @@
                         </div>
                         <div class="col-xs-9 media-body">
                             <h4 class="media-heading">Comunicación Unificada</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            <p class="text-justify">Schooltek ayuda a los colegios a simplificar las actividades diarias en sus procesos administrativos y ayuda a mejorar la comunicación con los padres y estudiantes.</p>
                         </div>
                     </div>
 
@@ -141,8 +146,8 @@
                             <img class="icon-service img-responsive" src="images/services/iconos-29.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Información institucional y académica</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            <h4 class="media-heading">Información Institucional y Académica</h4>
+                            <p class="text-justify">Mantén informados a los padres y estudiantes de las principales informaciones escolares: Calificaciones, tareas, asistencias, calendario, información institucional de tu colegio.</p>
                         </div>
                     </div>
 
@@ -151,8 +156,8 @@
                             <img class="icon-service img-responsive" src="images/services/iconos-43.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Mensajes</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            <h4 class="media-heading">Mensajes y Alertas</h4>
+                            <p class="text-justify">Envíe mensajes a los padres y estudiantes sobre asuntos relevantes de tu colegio.</p>
                         </div>
                     </div>
                 </div>
@@ -163,8 +168,8 @@
                             <img class="icon-service img-responsive" src="images/services/iconos-15.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Estadísticas e información</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            <h4 class="media-heading">Control de estadísticas</h4>
+                            <p class="text-justify">Monitorea el desempeño de las actividades de tu colegio desde el panel de estadísticas y obtén reportes que te ayuden e evaluar mejor tus procesos.</p>
                         </div>
                     </div>
 
@@ -173,8 +178,8 @@
                             <img class="icon-service img-responsive" src="images/services/iconos-19.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Control optimizado del tiempo</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            <h4 class="media-heading">Optimización de tiempo y Recursos</h4>
+                            <p class="text-justify">Schooltek ayuda a los colegios a simplificar las actividades diarias en los procesos administrativos lo que permite simplificar reducir tiempo y recursos.</p>
                         </div>
                     </div>
 
@@ -183,83 +188,83 @@
                             <img class="icon-service img-responsive" src="images/services/iconos-25.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Control de facturas y pago</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            <h4 class="media-heading">Pagos de colegiaturas</h4>
+                            <p class="text-justify">Envía la boleta de pago de la colegiatura de la forma más simple y práctica.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <p class="follow-link text-center">For more information, please follow the <a href="for_more_information1.html">link</a></p>
+            <p class="follow-link text-center">Para obtener más información, por favor siga el siguiente <a href="for_more_information1.html">enlace</a></p>
         </div>
     </section>
 
-    <section id="features">
+    <section id="parents">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Keep in touch with parents and students</h2>
-                <p class="text-center wow fadeInDown">The Schooltek app is designed for parents to be aware of academic information on their children to support them to improve their school performance.</p>
+                <h2 class="section-title text-center wow fadeInDown">Padres y estudiantes mejor conectados con los colegios</h2>
+                <p class="text-center wow fadeInDown">Con Schooltek los padres están al tanto de la información académica de sus hijos para apoyarlos a mejorar su rendimiento escolar.</p>
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="row media service-box wow fadeInRight">
+                    <div class="row media service-box-small wow fadeInRight">
                         <div class="col-xs-3">
                             <img class="icon-service img-responsive" src="images/services/iconos-29.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Información institucional</h4>
-                            <p>Visualización de la información institucional: misión y visión, valores, reglamento y directorio.</p>
+                            <h4 class="media-heading">Información Institucional</h4>
+                            <p class="text-justify">Visualiza la Información Institucional de tu colegio: Misión y Visión, Valores, reglamento y directorio.</p>
                         </div>
                     </div>
 
-                    <div class="row media service-box wow fadeInRight">
+                    <div class="row media service-box-small wow fadeInRight">
                         <div class="col-xs-3">
                             <img class="icon-service img-responsive" src="images/services/iconos-43.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
-                            <h4 class="media-heading">Mensajes y avisos</h4>
-                            <p>Visualización de los mensajes enviados del colegio con información relevante a sus hijos.</p>
+                            <h4 class="media-heading">Mensajes y Alertas</h4>
+                            <p class="text-justify">Los padres y estudiantes recibirán mensajes con los asuntos relevantes de la escuela.</p>
                         </div>
                     </div>
 
-                    <div class="row media service-box wow fadeInRight">
+                    <div class="row media service-box-small wow fadeInRight">
                         <div class="col-xs-3">
                             <img class="icon-service img-responsive" src="images/services/iconos-33.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
                             <h4 class="media-heading">Tareas</h4>
-                            <p>Visualización de las tareas y documentos asignados por el profesor.</p>
+                            <p class="text-justify">Recibe y descarga los archivos con las tareas asignadas y visualiza la fecha de entrega.</p>
                         </div>
                     </div>
                 </div>
                     
                 <div class="col-md-4">
-                    <div class="row media service-box wow fadeInRight">
+                    <div class="row media service-box-small wow fadeInRight">
                         <div class="col-xs-3">
                             <img class="icon-service img-responsive" src="images/services/iconos-35.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
                             <h4 class="media-heading">Asistencia</h4>
-                            <p>Visualización y control de asistencia de sus hijos.</p>
+                            <p class="text-justify">Mantente informado de la no-asistencia a las aulas de tus hijos.</p>
                         </div>
                     </div>
 
-                    <div class="row media service-box wow fadeInRight">
+                    <div class="row media service-box-small wow fadeInRight">
                         <div class="col-xs-3">
                             <img class="icon-service img-responsive" src="images/services/iconos-37.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
                             <h4 class="media-heading">Calificaciones</h4>
-                            <p>Visualización de las calificaciones del periódo actual y registro de los anteriores.</p>
+                            <p class="text-justify">Recibe las calificaciones de las materias que está cursando tus hijos.</p>
                         </div>
                     </div>
 
-                    <div class="row media service-box wow fadeInRight">
+                    <div class="row media service-box-small wow fadeInRight">
                         <div class="col-xs-3">
                             <img class="icon-service img-responsive" src="images/services/iconos-31.svg" alt="">
                         </div>
                         <div class="col-xs-9 media-body">
                             <h4 class="media-heading">Calendario</h4>
-                            <p>Visualización del calendario y eventos escolares.</p>
+                            <p class="text-justify">Sincroniza el calendario oficinal la escuela en tu teléfono móvil, confirma asistencia o no asistencia a los eventos Escolares.</p>
                         </div>
                     </div>
                 </div>
@@ -267,7 +272,7 @@
                     <img class="img-responsive" src="images/main-feature-2.png" alt="">
                 </div>
             </div>
-            <p class="follow-link text-center">For more information, please follow the <a href="for_more_information2.html">link</a></p>
+            <p class="follow-link text-center">Para obtener más información, por favor siga el siguiente <a href="for_more_information2.html">enlace</a></p>
         </div>
     </section>
 
@@ -276,8 +281,8 @@
         <div class="container">
 
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Position your school at the forefront of innovation</h2>
-                <p class="text-center wow fadeInDown">Schooltek. the most innovative educational technology for school communication</p>
+                <h2 class="section-title text-center wow fadeInDown">Padres conectados, mejores alumnos</h2>
+                <p class="text-center wow fadeInDown">Schooltek. La solución más innovadora para los colegios</p>
             </div>
 
             <div class="row">
@@ -286,9 +291,8 @@
                     <div class="video-content embed-responsive embed-responsive-16by9">
                         <video id="my-video" height="320px" width="auto" class="col s12" preload="auto" controls>
                             <source src="videos/schooltek-espanol.mp4" type='video/mp4'>
-                            <source src="{{ video.generic_path }}.mp4" type='video/mp4'>
-                            <source src="{{ video.generic_path }}.webm" type='video/webm'>
-                            <source src="{{ video.generic_path }}.ogv" type='video/ogg'>
+                            <source src="videos/schooltek-espanol.webm" type='video/webm'>
+                            <source src="videos/schooltek-espanol.ogv" type='video/ogg'>
                         </video>
                     </div>
                 </div>
@@ -301,43 +305,57 @@
         <div class="container">
             <div class="row footer-section">
                 <div class="col-xs-12 col-sm-4">
-                    <img width="170px" src="images/logo.svg" alt="">
+                    <a href="#home"><img width="170px" src="images/logo.svg" alt=""></a>
                 </div>
                 <div class="col-xs-6 col-sm-3 col-sm-offset-1">
-                    <a class="btn btn-primary" href="#" >Sign Up</a>
+                    <a class="btn btn-primary" href="#sign-up" >Regístrate</a>
                 </div>
                 <div class="col-xs-6 col-sm-3 col-sm-offset-1">
-                    <a class="btn btn-primary" href="#" >Be a partner</a>
+                    <a class="btn btn-primary" href="be-a-partner.html" >Sé un patrocinador</a>
                 </div>
             </div>
             <div class="row footer-section">
                 <div class="col-xs-6 col-sm-4">
-                    <a target="_blank" href="http://shapebootstrap.net/">Portugués<span>(Brasil)</span></a>
+                    <div class="dropdown">
+                        <button class="btn btn-language dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-globe"></i> Español<span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="http://br.schooltek.com">Portugués (Brazil)</a></li>
+                            <li><a href="http://schooltek.com">Inglés (USA)</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-xs-6 col-sm-3 col-sm-offset-1">
-                    <h4>About</h4>
-                    <a href="where_is_schooltek.html">Service</a>
+                    <h4>Acerca de</h4>
+                    <a href="where_is_schooltek.html">Servicio</a>
                 </div>
                 <div class="col-xs-12 col-sm-3 col-sm-offset-1">
-                    <ul class="">
-                        <li><a href="https://www.facebook.com/schooltekUSA/?fref=ts"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://twitter.com/schooltekusa"><i class="fa fa-twitter"></i></a></li>
+                    <ul class="social-network">
+                        <li><a href="https://www.facebook.com/schooltekmexico/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/schooltekmx"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="https://plus.google.com/100941369251237563464/posts"><i class="fa fa-google-plus"></i></a></li>
                         <li><a href="https://www.instagram.com/schooltek/"><i class="fa fa-instagram"></i></a></li>
                         <li><a href="https://www.youtube.com/channel/UCJHU9vQuAL5w7d_raSJx9bg"><i class="fa fa-youtube"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/schooltek"><i class="fa fa-linkedin"></i></a></li>
                     </ul>
                 </div>
             </div>
             <div class="row footer-section">
-                <div class="col-xs-12 col-sm-5">
+                <div class="col-xs-12 col-sm-4">
                     <address>info@schooltek.com</address>
                 </div>
-                <div class="col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-0">
-                    <img id="playstore" width="60%" class="img-responsive" src="images/playstore.png" alt="">
+                <div class="col-xs-5 col-sm-2">
+                    <a target="blank" href="https://play.google.com/store/apps/details?id=com.schooltek.client"><img id="playstore" width="66%" class="img-responsive" src="images/playstore.png" alt=""></a>
                 </div>
                 <div class="col-xs-5 col-sm-2">
-                    <img id="applestore" width="60%" class="img-responsive" src="images/applestore.png" alt="">
+                    <a target="blank" href="https://itunes.apple.com/mx/app/schooltek-mobile/id1120748572?l=en&mt=8"><img id="applestore" width="66%" class="img-responsive" src="images/applestore.png" alt=""></a>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <form class="form-control" action="subscribe.php" method="post" accept-charset="utf-8">
+                        <label for="email"></label>
+                        <input required type="email" name="email" placeholder="email@example.some">
+                        <input class="btn btn-primary" type="submit" value="Subscribe">
+                    </form>
                 </div>
             </div>
             <div class="row footer-section">
@@ -345,19 +363,48 @@
                     <p>&copy; 2016 Schooltek Inc.</p>
                 </div>
                 <div class="col-xs-5 col-sm-3 col-sm-offset-1">
-                    <a href="#">Privacidad</a>
+                    <a href="privacity.html">Privacidad</a>
                 </div>
                 <div class="col-xs-12 col-sm-3 col-sm-offset-1">
-                    <a href="#">Términos y condiciones</a>
+                    <a href="terms-of-service.html">Términos</a>
                 </div>
             </div>
         </div>
     </footer><!--/#footer-->
+
+    <!-- Regulations Modal -->
+    <div class="modal fade" id="regulations" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Normas y reglamentos de los sorteos</h4>
+          </div>
+          <div class="modal-body">
+            <p>1. REGISTRO: No es necesario comprar para participar o ganar. Los concursantes entrarán al sitio web de Schooltek por correo electrónico.</p>
+            <p>2. ELEGIBILIDAD: Este concurso está abierto sólo para las escuelas de México EE.UU. y Brasil. Los concursantes que residen en aquellas zonas donde el concurso no es válido podrán participar en el concurso, pero no puede ganar una licencia libre.</p>
+            <p>3. SELECCIÓN DE GANADORES: Los ganadores del concurso serán seleccionados por la ubicación de su colegio.</p>
+            <p>4. PREMIOS: Los ganadores recibirán los premios de acuerdo con la descripción en la página web del concurso Schooltek.com. Los premios serán la licencia libre por un mes con todas las funcionalidades de la plataforma de Schooltek para las escuelas y las licencias ilimitadas para los teléfonos móviles de los profesores, padres y  estudiantes con la versión de iOS 8 o más reciente o Android 4.4. Los ganadores están de acuerdo en que es su única responsabilidad de mantener a los requisitos enumerados anteriormente. Los detalles del premio serán determinados por Únicamente Schooltek Inc.. El premio no es transferible. La aceptación del premio constituye el permiso para utilizar Schooltek Inc. De informar el nombre del ganador, del nombre de la escuela, la imagen, y la inscripción en concepto de publicidad y comercio sin compensación adicional, a menos que esté prohibido por la ley.</p>
+            <p>5. NOTIFICACIÓN AL GANADOR: Los ganadores serán notificados en el plazo de 5 días después de la final del concurso por correo electrónico o medios de comunicación social. Incapacidad para ponerse en contacto con el ganador puede resultar en la descalificación y la selección de un ganador alternativo. El ganador tiene 14 días para proporcionar la información solicitada para comenzar a utilizar la plataforma de Schooltek.</p>
+            <p>6.  CONDICIONES GENERALES: a. Los participantes recibirán de Schooltek Inc. una licencia no exclusiva, perpetua y mundial para transmitir, publicar, almacenar, reproducir, distribuir, y de otra manera utilizar y exhibir la Presentación (junto con el nombre del colegio, imagen, perfil en medios de comunicación social, imágenes en todos los medios ahora conocidos y más tarde vienen a la existencia de efectos de comercio o la publicidad sin compensación adicional.</p>
+            <p>7. USO DE CONCURSO DE INFORMACIÓN: Todos los registros serán propiedad de Schooltek  Inc. se reserva el derecho de utilizar cualquier tipo de información relacionada con el concurso, incluyendo presentaciones proporcionadas por los concursantes, con fines editoriales, comercialización y otros fines, menos que esté prohibido por la ley.</p>
+            <p>8. SORTEO DE SELECCIÓN DEL GANADOR Y NOTIFICACIÓN: Ganador serán seleccionados por un sorteo al azar bajo la supervisión de Schooltek Inc. El ganador será notificado por correo electrónico o medios de comunicación social dentro de los cinco (5) días siguientes a la selección del ganador. Schooltek Inc. no tendrá ninguna responsabilidad por el fracaso del ganador para recibir avisos debido al spam, correo basura u otros parámetros de seguridad o para la prestación del ganador de la información de contacto incorrecta o de lo contrario no funcionamiento. Si el ganador no puede ser contactado, no es elegible, no puede reclamar el premio Dentro de los 14 días siguientes a la notificación, se seleccionará un ganador alternativo. La recepción por parte del ganador del premio ofrecido en esta campaña está condicionada al cumplimiento de todos y cada uno, estatales y locales leyes y regulaciones federales. CUALQUIER VIOLACIÓN de estas reglas oficiales por el ganador DARÁ LUGAR DE Descalificación DEL GANADOR DE LA CAMPAÑA, Y TODAS LAS privilegios que ganador será terminada de forma inmediata.</p>
+            <p>11. CONDUCTA: Todos los participantes del concurso acepta que quedará vinculado por estas Reglas Oficiales. Schooltek Inc. a su sola discreción se reserva el derecho de descalificar a cualquier persona que se encuentre manipulando el proceso de inscripción, el funcionamiento de su sitio web o de otra manera está en Violación de estas reglas.</p>
+            <p>12. LIMITACIONES DE RESPONSABILIDAD: Schooltek Inc. no es responsable de la tardanza en el envío de los datos, por correos perdidos o mal dirigido o fallos técnicos que. Si por alguna razón, el concurso no es capaz de ejecutar el plan planificado, incluyendo la infección por virus informáticos, errores, manipulación, intervención no autorizada o fallas técnicas de cualquier tipo, Schooltek Inc. puede cancelar, terminar, modificar o suspender el concurso. Los participantes están de acuerdo en liberar Schooltek Inc. de toda responsabilidad resultante de, o relacionados con la participación en el concurso.</p>
+            <p>13. LISTA DE GANADORES: Para obtener una copia del nombre del ganador o una copia de estas Reglas Oficiales, envíe su solicitud junto con un sobre con su dirección a: Schootek Inc. 1107 Alta Way School, MountainView, CA 94041. Las solicitudes deben ser recibido en la tarde del 30 de Sep, el año 2016 24:00 PDT.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Entendido</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/mousescroll.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/angular.js"></script>
 </body>
 </html>

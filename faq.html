@@ -1,58 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Schooltek | FAQ</title>
+    <title>Schooltek | Q&A Schools</title>
 	<!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.transitions.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
+
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+    <script src="js/angular.min.js"></script>
 </head><!--/head-->
 
-<body id="home" class="homepage">
+<body id="home">
 
-    <header id="header">
-        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"><img width="180px" src="images/logo.svg" alt="logo"></a>
-                </div>
-				
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li class="scroll active"><a href="index.html">Home</a></li>
-                        <li class="scroll"><a data-hash="#profesores" href="index.html#profesores">Solution</a></li>
-                        <li class="scroll"><a data-hash="#get-in-touch" href="index.html#get-in-touch">Sign up</a></li>
-                        <li class="scroll"><a href="faq.html">Q&A</a></li>
-                        <a id="login" class="btn btn-info" href="#">Login</a>
-                    </ul>
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-    </header><!--/header-->
+    <header id="header" ng-include="'header.html'"></header><!--/header-->
 
     <section id="faq-slider">
         <div class="item">
@@ -63,179 +37,178 @@
     <section id="faq">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Have a question? We have the answer!</h2>
+                <h2 class="section-title text-center wow fadeInDown">¿Tienes una pregunta? ¡Tenemos la respuesta!</h2>
             </div>
 
-            <div class="container">
-                <div class="row media service-box wow fadeInRight">
+            <div id="questions-qya"> 
+                <div class="container">
+                    <div class="row media service-box wow fadeInRight">
 
-                    <div class="question-menu-item col-xs-6 col-sm-2 col-sm-offset-2">
-                        <a href="#getting">
-                            <img class="icon-question img-responsive" src="images/questions/questions1.png" alt="">
-                            <h4 class="text-center">Getting Started</h4>
-                        </a>
+                        <div class="question-menu-item col-xs-6 col-sm-2 col-sm-offset-2">
+                            <a href="#getting">
+                                <img class="icon-question img-responsive" src="images/questions/questions1.svg" alt="">
+                                <h4 class="text-center">Comienza a usar</h4>
+                            </a>
+                        </div>
+
+                        <div class="question-menu-item col-xs-6 col-sm-2">
+                            <a href="#security">
+                                <img class="icon-question img-responsive" src="images/questions/questions2.svg" alt="">
+                                <h4 class="text-center">Seguridad</h4>
+                            </a>
+                        </div>
+
+                        <div class="question-menu-item col-xs-6 col-sm-2">
+                            <a href="#communicating">
+                                <img class="icon-question img-responsive" src="images/questions/questions3.svg" alt="">
+                                <h4 class="text-center">Comunicación</h4>
+                            </a>
+                        </div>
+
+                        <div class="question-menu-item col-xs-6 col-sm-2">
+                            <a href="#apps">
+                                <img class="icon-question img-responsive" src="images/questions/questions4.svg" alt="">
+                                <h4 class="text-center">Aplicaciones y uso</h4>
+                            </a>
+                        </div>
                     </div>
-
-                    <div class="question-menu-item col-xs-6 col-sm-2">
-                        <a href="#security">
-                            <img class="icon-question img-responsive" src="images/questions/questions2.png" alt="">
-                            <h4 class="text-center">Security</h4>
-                        </a>
-                    </div>
-
-                    <div class="question-menu-item col-xs-6 col-sm-2">
-                        <a href="#communicating">
-                            <img class="icon-question img-responsive" src="images/questions/questions3.png" alt="">
-                            <h4 class="text-center">Communicating</h4>
-                        </a>
-                    </div>
-
-                    <div class="question-menu-item col-xs-6 col-sm-2">
-                        <a href="#apps">
-                            <img class="icon-question img-responsive" src="images/questions/questions4.png" alt="">
-                            <h4 class="text-center">Apps and use</h4>
-                        </a>
-                    </div>
-
                 </div>
             </div>
 
             <div id="answers">
                 <div id="getting" class="question-section">
-                    <h3 class="wow fadeInDown">Getting Started</h3>
+                    <h3 class="wow fadeInDown">Comienza a usar</h3>
 
                     <div class="panel panel-default">
                         <div data-toggle="collapse" data-target="#question1" class="panel-heading">
-                            <h4 class="panel-title">1. How do I begin to use schooltek?</h4>
+                            <h4 class="panel-title">1. ¿Cómo comienzo a utilizar Schooltek?</h4>
                         </div>
                         <div id="question1" class="collapse panel-body">
-                        After contacting and recivig an email with your ID, password and Login, you can upload your school information within schooltek.
+                        Después de registrarte, recibirás un contacto de Schooltek para validar tus datos. Posteriormente recibirás un correo electrónico con tu usuario, contraseña e identificador de colegio para tu acceso a tu escuela dentro de Schooltek.
                         </div>
                     </div>
                     <div data-toggle="collapse" data-target="#question2" class="panel panel-default">
                         <div  class="panel-heading">
-                            <h4 class="panel-title">2. How do I connect with parents and students?</h4>
+                            <h4 class="panel-title">2. ¿Cómo me conecto con los padres y estudiantes?</h4>
                         </div>
                         <div id="question2" class="collapse panel-body">
-                        Please upload your school information including the list of e-mails from your professors, parents and students. Then they will receive ande mail with their ID, password and login to use schooltek. The will also recive a link to download the app from the Apple App store or from Google Play. After installing the app, they can begin to use schooltek in their Smartphone. They acan also Access to schooltek by the web.
+                        Después de cargar la información de tu colegio dentro de Schooltek, tendrás el acceso a toda la información de los profesores, padres y estudiantes dentro de tu colegio.
                         </div>
                     </div>
                 </div>
 
                 <div id="security" class="question-section">
-                    <h3 class="wow fadeInDown">Security</h3>
+                    <h3 class="wow fadeInDown">Seguridad</h3>
 
                     <div class="panel panel-default">
                         <div data-toggle="collapse" data-target="#question3" class="panel-heading">
-                            <h4 class="panel-title">1. How is the schooltek app secure?</h4>
+                            <h4 class="panel-title">1. ¿Qué tan segura es la aplicación Schooltek?</h4>
                         </div>
                         <div id="question3" class="collapse panel-body">
-                        The Schooltek app uses encryption and secure connections to keep your data secure. And all your comunity will use a unique ID from your school. Any other people from other school can connect to your school information.
+                        La aplicación Schooltek utiliza encriptación y los más altos estándares de seguridad para mantener tus datos seguros.
                         </div>
                     </div>
                 </div>
 
                 <div id="communicating" class="question-section">
-                    <h3 class="wow fadeInDown">Communicating</h3>
+                    <h3 class="wow fadeInDown">Comunicación</h3>
 
                     <div class="panel panel-default">
                         <div data-toggle="collapse" data-target="#question4" class="panel-heading">
-                            <h4 class="panel-title">1. Schooltek apps can send and receive messages to/from the parents and students?</h4>
+                            <h4 class="panel-title">1. ¿Pueden los padres y estudiantes enviar y recibir mensajes para el colegio o del colegio utilizando la aplicación de Schooltek?</h4>
                         </div>
                         <div id="question4" class="collapse panel-body">
-                        Only the schooltek app of parents and students  can be used to receive messages from the school. They can only see notifications and confirm to schools of been received messages or been informed ot one event in their calendar.
+                        Sí, Los padres y estudiantes pueden enviar únicamente mensajes de confirmación y recibir cualquier mensaje del colegio. 
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div data-toggle="collapse" data-target="#question5" class="panel-heading">
-                            <h4 class="panel-title">2. Which network does the schooltek use?</h4>
+                            <h4 class="panel-title">2. ¿Cómo me conecto a schooltek?</h4>
                         </div>
                         <div id="question5" class="collapse panel-body">
-                        The schooltek can be used by wifi or data plan depending of your internet provider.
+                        Schooltek utiliza la red de wifi o cualquier red de datos móviles dependiendo de tu proveedor de internet.
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div data-toggle="collapse" data-target="#question6" class="panel-heading">
-                            <h4 class="panel-title">3. Does my phone need to be on a specific network?</h4>
+                            <h4 class="panel-title">3. ¿Mi teléfono tiene que estar en una red específica?</h4>
                         </div>
                         <div id="question6" class="collapse panel-body">
-                        No. Your phone can be on any network.
+                        No, tu teléfono puede estar en cualquier red.
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div data-toggle="collapse" data-target="#question7" class="panel-heading">
-                            <h4 class="panel-title">4. Can I make voice calls to/from the schooltek?</h4>
+                            <h4 class="panel-title">4. ¿Puedo hacer llamadas de voz desde Schooltek?</h4>
                         </div>
                         <div id="question7" class="collapse panel-body">
-                        It is not possible to make voice calls from/to the schooltek. 
+                        No, no es posible realizar llamadas de voz desde la aplicación de Schooltek.
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div data-toggle="collapse" data-target="#question8" class="panel-heading">
-                            <h4 class="panel-title">5. To whom can parentes and students send confirmation messages from the schooltek?</h4>
+                            <h4 class="panel-title">5. ¿Pueden otros colegios accesar a las informaciones académicas utilizando Schooltek?</h4>
                         </div>
-                        <div id="question8" class="collapse panel-body">
-                        Parents can see the information related to their children (more than one) in one particular school and they can send messages abour confirmation the information they received to the school.
-                        </div>
+                        <div id="question8" class="collapse panel-body">No, no podrán, las informaciones académicas solo serán vistas en tu colegio.</div>
                     </div>
                     <div class="panel panel-default">
                         <div data-toggle="collapse" data-target="#question9" class="panel-heading">
-                            <h4 class="panel-title">6. From whom can my parents and studentes receive messages on the schooltek?</h4>
+                            <h4 class="panel-title">6. ¿Quién puede enviar mensajes a los padres y estudiantes?</h4>
                         </div>
                         <div id="question9" class="collapse panel-body">
-                        Parents and student will receive messages from teachers  or the people resonsible for schooltek in your school.
+                        Los profesores o el personal administrativo asignado dentro de tu colegio.
                         </div>
                     </div>
                 </div>
 
                 <div id="apps" class="question-section">
-                    <h3 class="wow fadeInDown">Apps and use</h3>
+                    <h3 class="wow fadeInDown">Aplicaciones y uso</h3>
 
                     <div class="panel panel-default">
                         <div data-toggle="collapse" data-target="#question10" class="panel-heading">
-                            <h4 class="panel-title">1. How often do I need to dowload schooltek?</h4>
+                            <h4 class="panel-title">1. ¿Con qué frecuencia puedo descargar la aplicación móvil?</h4>
                         </div>
                         <div id="question10" class="collapse panel-body">
-                        You can download any  time the app and  the upgrades will be free on charge.
+                        La aplicación móvil puede ser descargada en cualquier momento y las actualizaciones serán en automático y sin cargo.
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div data-toggle="collapse" data-target="#question11" class="panel-heading">
-                            <h4 class="panel-title">2. How do kids use schooltek?</h4>
+                            <h4 class="panel-title">2. ¿Cómo utiliza Schooltek el personal administrativo y los profesores de tu colegio?</h4>
                         </div>
                         <div id="question11" class="collapse panel-body">
-                        Kids can use the schooltek app to connect with school, to track their academic information.
+                        Pueden utilizarlo a través del portal web de Schooltek.
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div data-toggle="collapse" data-target="#question12" class="panel-heading">
-                            <h4 class="panel-title">3. Who is schooltek designed for?</h4>
+                            <h4 class="panel-title">3. ¿Para qué niveles de escolaridad está diseñado Schooltek?</h4>
                         </div>
                         <div id="question12" class="collapse panel-body">
-                        Schooltek is designed for schools from elementary to miclle school.
+                        Schooltek está diseñado para las escuelas desde preescolar hasta universidad.
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div data-toggle="collapse" data-target="#question13" class="panel-heading">
-                            <h4 class="panel-title">4. Which smartphones are supported?</h4>
+                            <h4 class="panel-title">4. ¿Qué teléfonos inteligentes son compatibles?</h4>
                         </div>
                         <div id="question13" class="collapse panel-body">
-                        Schooltek supports iOS (iPhone 5, 5S, 6, 6+, 6S and 6S+) and Android phones starting with version 4.1 (Jelly Beam) which includes Samsung, LG, Motorola, HTC and others.
+                        Schooltek es compatible con iOS (iPhone 5, 5S, 6, 6 +, 6S y 6S +) y los teléfonos Android a partir de la versión 4.1 (Jelly Beam) que incluye Samsung, LG, Motorola, HTC y otros.
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div data-toggle="collapse" data-target="#question14" class="panel-heading">
-                            <h4 class="panel-title">5. What happens if the schooltek app is removed?</h4>
+                            <h4 class="panel-title">5. ¿Puedo cancelar el servicio de Schooltek?</h4>
                         </div>
                         <div id="question14" class="collapse panel-body">
-                        You can download the app any time
+                        Si, puedes cancelar el uso a la aplicación en cualquier momento.
                         </div>
                     </div>
                 </div>
             </div>
             <div class="section-header">
-                <p class="text-center">DIDN'T FIND THE ANSWER YOU WERE LOOKING FOR?</p>
-                <h2 id="contact-title" class="text-center wow fadeInDown">Contact our experts</h2>
+                <p class="text-center">¿NO HAS ENCONTRADO LA RESPUESTAS QUE BUSCABAS?</p>
+                <h2 id="contact-title" class="text-center wow fadeInDown">Póngase en contacto con nuestros expertos</h2>
             </div>
         </div>
     </section>
@@ -246,24 +219,24 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
                         <div class="contact-form">
-                            <form id="main-contact-form" name="contact-form" method="post" action="#">
+                            <form id="question-contact-form" name="contact-form" method="post" action="questionmail.php">
                                 <div class="form-group">
-                                    <label for="name">Full Name<span>*</span></label>
-                                    <input type="text" name="name" class="form-control" placeholder="Your name" required>
+                                    <label for="name">Nombre completo<span>*</span></label>
+                                    <input type="text" name="name" class="form-control" placeholder="Nombre completo" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">Email<span>*</span></label>
+                                    <label for="email">Email<span>*</span></label>
                                     <input type="email" name="email" class="form-control" placeholder="email@example.com" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">Subject</label>
-                                    <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                                    <label for="subject">Asunto<span>*</span></label>
+                                    <input type="text" name="subject" class="form-control" placeholder="Asunto" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">Your Message<span>*</span></label>
-                                    <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+                                    <label for="message">Mensaje<span>*</span></label>
+                                    <textarea name="message" class="form-control" rows="5" placeholder="Mensaje" required></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
                             </form>
                         </div>
                     </div>
@@ -272,72 +245,11 @@
         </div>
     </section><!--/#bottom-->
 
-    <footer id="footer">
-        <div class="container">
-            <div class="row footer-section">
-                <div class="col-xs-12 col-sm-4">
-                    <img width="170px" src="images/logo.svg" alt="">
-                </div>
-                <div class="col-xs-6 col-sm-3 col-sm-offset-1">
-                    <a class="btn btn-primary" href="#" >Sign Up</a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-sm-offset-1">
-                    <a class="btn btn-primary" href="#" >Be a partner</a>
-                </div>
-            </div>
-            <div class="row footer-section">
-                <div class="col-xs-6 col-sm-4">
-                    <a target="_blank" href="http://shapebootstrap.net/">Portugués<span>(Brasil)</span></a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-sm-offset-1">
-                    <h4>About</h4>
-                    <a href="where_is_schooltek.html">Service</a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-sm-offset-1">
-                    <ul class="">
-                        <li><a href="https://www.facebook.com/schooltekUSA/?fref=ts"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://twitter.com/schooltekusa"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="https://plus.google.com/100941369251237563464/posts"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="https://www.instagram.com/schooltek/"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCJHU9vQuAL5w7d_raSJx9bg"><i class="fa fa-youtube"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row footer-section">
-                <div class="col-xs-12 col-sm-5">
-                    <address>info@schooltek.com</address>
-                </div>
-                <div class="col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-0">
-                    <img id="playstore" width="60%" class="img-responsive" src="images/playstore.png" alt="">
-                </div>
-                <div class="col-xs-5 col-sm-2">
-                    <img id="applestore" width="60%" class="img-responsive" src="images/applestore.png" alt="">
-                </div>
-            </div>
-            <div class="row footer-section">
-                <div class="col-xs-6 col-sm-4">
-                    <p>&copy; 2016 Schooltek Inc.</p>
-                </div>
-                <div class="col-xs-5 col-sm-3 col-sm-offset-1">
-                    <a href="#">Privacidad</a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-sm-offset-1">
-                    <a href="#">Términos y condiciones</a>
-                </div>
-            </div>
-        </div>
-    </footer><!--/#footer-->
+    <footer id="footer" ng-include="'footer.html'"></footer><!--/#footer-->
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="js/owl.carousel.min.js"></script>
     <script src="js/mousescroll.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jquery.inview.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
 </body>
