@@ -47,6 +47,11 @@ h2 {
   text-transform: none !important;
 }
 
+.section-header h3 {
+  font-weight: 400 !important;
+  color: #64686d;
+}
+
 a {
   color: #6cb670;
   -webkit-transition: color 200ms, background-color 200ms;
@@ -71,6 +76,14 @@ a:focus {
   float: right;
   line-height: 54px;
   padding-top: 25px;
+}
+
+.call-action {
+  float: none;
+  font-size: 48px !important;
+}
+.call-action > span{
+  font-size: 32px !important;
 }
 
 .btn-schooltek >span {
@@ -700,6 +713,3 @@ address {
 #partners .form-group label{
   margin: 0;
 }
-
-
-
