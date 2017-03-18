@@ -330,6 +330,10 @@
     font-weight: bold;
   }
 
+  .call-action{
+    margin-right: 30%; 
+  }
+
   #main-slider .slider-inner h2 {
     margin-top: 220px;
     font-size: 76px;
