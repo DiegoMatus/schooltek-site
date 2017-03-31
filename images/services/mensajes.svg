@@ -2,7 +2,8 @@
 <!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.2" baseProfile="tiny" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 	 x="0px" y="0px" viewBox="0 0 1024 1024" xml:space="preserve">
-<circle fill="#E57505" cx="512" cy="512" r="512"/>
-<path fill="#FFFFFF" d="M344,262v75h-48v50h48h48v25h-48v50h-48v50h48h48v25h-48v50h-48v50h48h48v25h-48v100h336
-	c26.4,0,48-22.5,48-50V312c0-27.5-21.6-50-48-50H344z M440,362h216v150H440V362z M464,412v50h168v-50H464z"/>
+<circle fill="#666666" cx="512" cy="512" r="512"/>
+<path fill="#FFFFFF" d="M312.8,327c-27.4,0-49.8,20.8-49.8,46.2v277.5c0,25.4,22.4,46.2,49.8,46.2h398.4c27.4,0,49.8-20.8,49.8-46.2
+	V373.2c0-25.4-22.4-46.2-49.8-46.2H312.8z M312.8,373.2h398.4v277.5H312.8V373.2z M337.7,387v46.2L512,535.1l174.3-101.9V387
+	L512,488.9L337.7,387z"/>
 </svg>
