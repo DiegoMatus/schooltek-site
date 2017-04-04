@@ -78,6 +78,11 @@ a:focus {
   padding-top: 25px;
 }
 
+.btn .btn-more-information {
+  background-color: #BE3037 !important;
+  color: white !important;
+}
+
 .call-action {
   float: none;
   font-size: 48px !important;
