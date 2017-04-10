@@ -3,7 +3,7 @@ $name       = @trim(stripslashes($_POST['name']));
 $from       = @trim(stripslashes($_POST['email'])); 
 $subject    = @trim(stripslashes($_POST['subject'])); 
 $body 		= @trim(stripslashes($_POST['message'])); 
-$to   		= 'cube.di.rubik@gmail.com,info@schooltek.com,Lorenzo@schooltek.com,diego@schooltek.com';//replace with your email
+$to   		= 'info@schooltek.com,diego@schooltek.com';//replace with your email
 
 if ( !empty($name) && !empty($from) && !empty($subject) && !empty($body) ) {
 	$message = "
