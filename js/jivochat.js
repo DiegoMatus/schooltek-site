@@ -8,7 +8,7 @@ $zopim(function() {
   });
 $zopim(function() {
     $zopim.livechat.setGreetings({
-          online: '¡Contactanos!',
+          online: '¡Contáctanos!',
           offline: 'Deja tu mensaje'
       });
   });
